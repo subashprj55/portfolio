@@ -5,6 +5,7 @@ import Service from "./Component/Service";
 import NumberLoader from "./Component/NumberLoader";
 import Projects from "./Component/Projects";
 import YourPlan from "./Component/YourPlan";
+import Footer from "./Component/Footer";
 import { useGlobalContext } from "./contex";
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         <NumberLoader />
         <Projects />
         <YourPlan />
+        <Footer />
       </div>
     </>
   );

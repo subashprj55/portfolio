@@ -8,14 +8,14 @@ const Projects = () => {
     "p-5 capitalize text-2xl  hover:underline hover:underline-offset-2";
   const activeBtn = "text-blue-400";
 
-  const showProject = (id, name, type, img) => {
+  const showProject = (name, type, img) => {
     return (
-      <div key={id} className="w-[33.33%] mb-5 pl-10 ">
+      <div className="w-[33.33%] mb-5 pl-10 ">
         <div className="flex justify-center">
           <img
             src={img}
             alt=""
-            className="border rounded-3xl w-[350px] h-auto object-cover hover:cursor-pointer hover:scale-105 duration-300"
+            className="border rounded-3xl w-[350px] max-h-[240px] object-cover hover:cursor-pointer hover:scale-105 duration-300"
           />
         </div>
         <h1 className="text-center text-2xl capitalize mt-3 tracking-wide font-medium">
@@ -61,10 +61,10 @@ const Projects = () => {
           {myProject.map((data) => {
             const { id, name, type, img } = data;
             if (type === items) {
-              return <>{showProject(id, name, type, img)}</>;
+              return <div key={id}>{showProject(id, name, type, img)}</div>;
             }
             if (items === "all") {
-              return <>{showProject(id, name, type, img)}</>;
+              return <div key={id}>{showProject(id, name, type, img)}</div>;
             }
           })}
           {items === "" ? (

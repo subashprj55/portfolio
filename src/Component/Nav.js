@@ -7,7 +7,6 @@ import { useGlobalContext } from "../contex";
 //7beec1
 const Nav = () => {
   const { footerLength } = useGlobalContext();
-  // console.log(footerLength);
 
   const onTop = () => {
     window.scrollTo({
@@ -31,12 +30,11 @@ const Nav = () => {
         <div className={`${linkDiv}`}>
           <ul className={`${headerUl}`}>
             <li className={`${headerLi}`}>
-              <button className="capitalize" onClick={onTop}>
-                {" "}
-                home
-              </button>
+              <button className="capitalize"> home</button>
             </li>
-            <li className={`${headerLi}`}>about us</li>
+            <li className={`${headerLi}`} onClick={onTop}>
+              about us
+            </li>
             <li className={`${headerLi}`}>contact</li>
           </ul>
         </div>

@@ -3,7 +3,7 @@ import React, { useState, useContext } from "react";
 const AppContex = React.createContext();
 
 const AppProvider = ({ children }) => {
-  const [footerLength, setFooterLenght] = useState(10000);
+  const [footerLength, setFooterLenght] = useState();
   return (
     <AppContex.Provider value={{ setFooterLenght, footerLength }}>
       {children}
