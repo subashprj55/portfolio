@@ -29,7 +29,7 @@ const Slider = () => {
             <img
               src={image}
               alt="my photo"
-              className="border-spacing-5 h-[100%] w-[87%] object-cover"
+              className="border-spacing-5 h-[400px] w-[500px]  rounded-xl"
             />
           </div>
         );

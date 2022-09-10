@@ -8,31 +8,44 @@ import { useGlobalContext } from "../contex";
 const Nav = () => {
   const { footerLength } = useGlobalContext();
 
-  const onTop = () => {
+  const onTop = (toppos) => {
     window.scrollTo({
-      top: footerLength,
+      top: toppos,
       left: 0,
       behavior: "smooth",
     });
   };
 
-  const headerDiv = "bg-[#659dbd] pb-3";
+  const headerDiv = "bg-[#659dbd] pb-1";
   const headerlogo =
-    "capitalize text-6xl mt-5 ml-20 font-serif text-yellow-400 cursor-pointer";
-  const linkDiv = "mr-20 mt-5";
+    "capitalize text-6xl mt-3 ml-20 font-serif text-yellow-400 cursor-pointer";
+  const linkDiv = "mr-20 mt-3";
   const headerUl = " text-2xl text-white tracking-wide flex";
   const headerLi =
     "cursor-pointer capitalize mr-2 p-5  hover:bg-yellow-300 hover:text-blue-900 duration-700 rounded-2xl";
   return (
     <>
-      <div className={` flex justify-between ${headerDiv}`}>
+      <div className={` flex justify-between ${headerDiv} fixed w-[100%] z-50`}>
         <div className={`${headerlogo}`}>my-side</div>
         <div className={`${linkDiv}`}>
           <ul className={`${headerUl}`}>
             <li className={`${headerLi}`}>
-              <button className="capitalize"> home</button>
+              <button
+                className="capitalize"
+                onClick={(e) => {
+                  onTop(0);
+                }}
+              >
+                {" "}
+                home
+              </button>
             </li>
-            <li className={`${headerLi}`} onClick={onTop}>
+            <li
+              className={`${headerLi}`}
+              onClick={(e) => {
+                onTop(footerLength);
+              }}
+            >
               about us
             </li>
             <li className={`${headerLi}`}>contact</li>

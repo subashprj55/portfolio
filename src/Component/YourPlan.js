@@ -35,7 +35,7 @@ const YourPlan = () => {
                 rs-75,000
               </p>
               <div className="flex justify-center">
-                <button className="hidden text-center capitalize mt-5 p-3 text-2xl font-medium group-hover:block group-hover:text-black bg-yellow-400  rounded-md">
+                <button className="hidden text-center capitalize mt-5 p-3 text-2xl font-medium group-hover:block group-hover:text-black bg-yellow-400  rounded-md active:bg-yellow-500">
                   apply now
                 </button>
               </div>
@@ -55,10 +55,10 @@ const YourPlan = () => {
               <p
                 className={` text-center uppercase mt-5 p-3 text-2xl font-medium group-hover:hidden`}
               >
-                rs-75,000
+                rs-2,00,000
               </p>
               <div className="flex justify-center">
-                <button className="hidden text-center capitalize mt-5 p-3 text-2xl font-medium group-hover:block group-hover:text-black bg-yellow-400  rounded-md">
+                <button className="hidden text-center capitalize mt-5 p-3 text-2xl font-medium group-hover:block group-hover:text-black bg-yellow-400  rounded-md active:bg-yellow-500">
                   apply now
                 </button>
               </div>
@@ -78,10 +78,13 @@ const YourPlan = () => {
               <p
                 className={` text-center uppercase mt-5 p-3 text-2xl font-medium group-hover:hidden`}
               >
-                rs-75,000
+                rs-4,00,000
               </p>
               <div className="flex justify-center">
-                <button className="hidden text-center capitalize mt-5 p-3 text-2xl font-medium group-hover:block group-hover:text-black bg-yellow-400  rounded-md">
+                <button
+                  className="hidden text-center capitalize mt-5 p-3 text-2xl font-medium group-hover:block group-hover:text-black bg-yellow-400  rounded-md active:bg-yellow-500
+                "
+                >
                   apply now
                 </button>
               </div>
