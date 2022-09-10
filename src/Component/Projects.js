@@ -10,7 +10,7 @@ const Projects = () => {
 
   const showProject = (name, type, img) => {
     return (
-      <div className="w-[33.33%] mb-5 pl-10 ">
+      <div className=" mb-5 pl-10 ml-20">
         <div className="flex justify-center">
           <img
             src={img}
@@ -57,14 +57,14 @@ const Projects = () => {
             advance
           </button>
         </div>
-        <div className="flex flex-wrap pt-10 ">
+        <div className="flex flex-wrap pt-10">
           {myProject.map((data) => {
             const { id, name, type, img } = data;
             if (type === items) {
-              return <div key={id}>{showProject(id, name, type, img)}</div>;
+              return <div key={id}>{showProject(name, type, img)}</div>;
             }
             if (items === "all") {
-              return <div key={id}>{showProject(id, name, type, img)}</div>;
+              return <div key={id}>{showProject(name, type, img)}</div>;
             }
           })}
           {items === "" ? (

@@ -1,16 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const YourPlan = () => {
-  const [isBoxOpen, setIsBoxOpen] = useState(false);
-  // console.log(isBoxOpen);
-
-  const boxOpen = () => {
-    setIsBoxOpen(true);
-  };
-  const boxClose = () => {
-    setIsBoxOpen(false);
-  };
-
   const proDiv =
     "w-[33.33%] p-10 bg-[#f1f1f1] hover:scale-105 cursor-pointer duration-500 hover:bg-gray-600 hover:text-white hover:z-10 ";
   const proh1 = "text-center mt-5 font-semibold text-2xl";
@@ -19,31 +9,39 @@ const YourPlan = () => {
     "w-28 h-28 rounded-full border-8  border-blue-200 flex justify-center items-center";
   const divP = "text-3xl font-medium";
   const desP = "pb-3 pt-3 border-b-4 border-white text-lg";
+
   return (
     <>
-      <div className=" m-20 capitalize">
+      <div className=" p-20 pt-0 capitalize">
         <h1 className="font-semibold text-4xl text-center pt-10">
           choose your plan
         </h1>
         <p className="text-center">This is only for sample</p>
-        <div className="flex mt-10">
-          <div className={`${proDiv}`}>
-            <div className={`${divFlex}`}>
-              <div className={`${proCir}`}>
+        <div className="flex mt-10 relative gap-3">
+          <div className={`${proDiv} group`}>
+            <div className={`${divFlex} `}>
+              <div className={`${proCir} `}>
                 <p className={`${divP}`}>01</p>
               </div>
             </div>
             <h1 className={`${proh1} `}>small range</h1>
             <div className="mt-5">
               <p className={`${desP} `}>desktop only</p>
-              <p className={`${desP}`}>scurity level : 10%</p>
-              <p className={`${desP}`}>design : not bad</p>
-              <p className={`text-center uppercase pt-5 text-2xl font-medium`}>
-                rs-75,000{" "}
+              <p className={`${desP} `}>scurity level : 10%</p>
+              <p className={`${desP} `}>design : not bad</p>
+              <p
+                className={` text-center uppercase mt-5 p-3 text-2xl font-medium group-hover:hidden`}
+              >
+                rs-75,000
               </p>
+              <div className="flex justify-center">
+                <button className="hidden text-center capitalize mt-5 p-3 text-2xl font-medium group-hover:block group-hover:text-black bg-yellow-400  rounded-md">
+                  apply now
+                </button>
+              </div>
             </div>
           </div>
-          <div className={`${proDiv} `}>
+          <div className={`${proDiv} group`}>
             <div className={`${divFlex}`}>
               <div className={`${proCir}`}>
                 <p className={`${divP}`}>02</p>
@@ -54,12 +52,19 @@ const YourPlan = () => {
               <p className={`${desP} `}>desktop + mobile</p>
               <p className={`${desP}`}>scurity level : 40%</p>
               <p className={`${desP}`}>design : good</p>
-              <p className={`text-center uppercase pt-5 text-2xl font-medium`}>
-                rs-2,00,000{" "}
+              <p
+                className={` text-center uppercase mt-5 p-3 text-2xl font-medium group-hover:hidden`}
+              >
+                rs-75,000
               </p>
+              <div className="flex justify-center">
+                <button className="hidden text-center capitalize mt-5 p-3 text-2xl font-medium group-hover:block group-hover:text-black bg-yellow-400  rounded-md">
+                  apply now
+                </button>
+              </div>
             </div>
           </div>
-          <div className={`${proDiv}`}>
+          <div className={`${proDiv} group`}>
             <div className={`${divFlex}`}>
               <div className={`${proCir}`}>
                 <p className={`${divP}`}>03</p>
@@ -70,9 +75,16 @@ const YourPlan = () => {
               <p className={`${desP} `}>all divices</p>
               <p className={`${desP}`}>scurity level : 100%</p>
               <p className={`${desP}`}>design : excellent</p>
-              <p className={`text-center uppercase pt-5 text-2xl font-medium`}>
-                rs-5,00,000{" "}
+              <p
+                className={` text-center uppercase mt-5 p-3 text-2xl font-medium group-hover:hidden`}
+              >
+                rs-75,000
               </p>
+              <div className="flex justify-center">
+                <button className="hidden text-center capitalize mt-5 p-3 text-2xl font-medium group-hover:block group-hover:text-black bg-yellow-400  rounded-md">
+                  apply now
+                </button>
+              </div>
             </div>
           </div>
         </div>
