@@ -15,7 +15,7 @@ const Slider = () => {
     }, 3000);
   }, [item]);
   return (
-    <div className="h-[90%] w-[80%] m-10 ml-20 mt-32 truncate relative">
+    <div className="h-[90%] w-[80%] m-10 md:ml-20 md:mt-32 truncate relative">
       {images.map((image, index) => {
         let posi = "translate-x-[100%] opacity-0 ";
         if (index === item) {
@@ -25,7 +25,7 @@ const Slider = () => {
           posi = "translate-x-[-100%] opacity-0 ";
         }
         return (
-          <div key={index} className={`absolute ${posi}  duration-[1000ms]`}>
+          <div key={index} className={`absolute ${posi}  duration-[2000ms]`}>
             <img
               src={image}
               alt="my photo"
